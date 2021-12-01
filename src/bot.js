@@ -1,5 +1,3 @@
-// TOKEN1 = ODgzNTMxMjc2OTMyNTEzODIy.YTLSnw.pRPTM4g7yev893nxkRu1_vtMt5k
-// TOKEN2 = OTE1NjQ1OTM1MzYxNjEzODk1.Yaenug.oh02WQW_gnDJguh6htvPSLyaRu0
 
 //https://discord.com/api/oauth2/authorize?client_id=915645935361613895&permissions=139586825280&scope=bot
 
