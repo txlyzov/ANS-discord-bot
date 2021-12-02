@@ -22,7 +22,7 @@ client.on('ready',() => {
     //         type: 'WATCHING' //PLAYING: WATCHING: LISTENING: STREAMING:
     //     }
     // })
-    client.user.setStatus('idle') //dnd idle online invisible
+    client.user.setStatus('invisible') //dnd idle online invisible
 
     new WOKCommands(client,{
         commandsDir: require('path').resolve('src/commands'),
@@ -33,4 +33,4 @@ client.on('ready',() => {
     .setDefaultPrefix('`')
 })
 
-client.login(process.env.TOKEN2)
+client.login(process.env.TOKEN)
