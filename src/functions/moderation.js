@@ -7,13 +7,15 @@ module.exports = (client) => {
         if (message.author.id!=client.user.id){
 
             //filter severity
-            let warningLevel = 1
+            let warningLevel = 0
             //final decision
             let banned = false
 
             //context check
             let context = message.content.toLowerCase().replace(Filters.domainRegex,'')
             if(context.match(Filters.mainBannedWords) || context.match(Filters.mainBannedWordsRus)){
+                warningLevel = 1
+
                 if(context.match(Filters.secondaryBannedWords) || context.match(Filters.secondaryBannedWords) || context.match(Filters.discordEveryones))
                 warningLevel = 2
             }
@@ -28,7 +30,7 @@ module.exports = (client) => {
                         return
                     }
                     switch(warningLevel){
-                        case 1:
+                        default:
                             return link.toLowerCase().replace(Filters.notLetters,'').match(Filters.mainBannedWords) != null
                         case 2:
                             return link.toLowerCase().replace(Filters.notLetters,'').match(Filters.allBannedWords) != null
@@ -55,8 +57,9 @@ module.exports = (client) => {
                     
                     message.channel.send(`**WARNING!**` 
                     + `\nCould be a scammer link from ${message.author}!! __Be careful,dont trust third party resources if you not sure what are you doing!__`
-                    + `\nOriginal message:`
-                    + `\n|| ${message.content.replace(Filters.protocolRegex,'[link disabled]').replace(Filters.discordEveryones,'[everyone disabled]')} ||`)
+                    + `\nOriginal message[links and everyones disabled]:`
+                    + `\n`
+                    + `\n|| ${message.content.replace(Filters.protocolRegex,'').replace(Filters.discordEveryones,'[everyone]')} ||`)
                 }
 
                 message.delete()  
