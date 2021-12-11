@@ -3,8 +3,8 @@
 
 //const DiscordJS = require('discord.js')
 const { Client, Intents } = require('discord.js');
-const WOKCommands = require('wokcommands')
-require('dotenv').config()
+const WOKCommands = require('wokcommands');
+require('dotenv').config();
 
 const client = new Client({ 
     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] 
@@ -22,7 +22,7 @@ client.on('ready',() => {
     //         type: 'WATCHING' //PLAYING: WATCHING: LISTENING: STREAMING:
     //     }
     // })
-    client.user.setStatus('dnd') //dnd idle online invisible
+    client.user.setStatus('dnd');//dnd idle online invisible
 
     new WOKCommands(client,{
         commandsDir: require('path').resolve('src/commands'),
@@ -33,4 +33,4 @@ client.on('ready',() => {
     .setDefaultPrefix('`')
 })
 
-client.login(process.env.TOKEN)
+client.login(process.env.TOKEN);
