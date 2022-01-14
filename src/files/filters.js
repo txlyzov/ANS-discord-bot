@@ -11,13 +11,13 @@ module.exports = {
     //keyBannedWords : /(giveway)|(gi?ft)|(ni?tro?)|(di?s?c?o?r?d?)|(free)|(steam)/g,
     //keyBannedWords : (giveway)|(gift)|(nitro)|(discord)|(free)|(steam)|(birth)|(premium)
 
-    mainBannedWords : /(n[il1]tr[oо0]?)|(d[il1]?[sc][sc]?[oо0]?r[db])/g,
+    mainBannedWords : /(n[il1]tr[oо0]?)|(d[il1]?[sc][sc]?[oо0d]?r[db])/g,
     mainBannedWordsRus : /(н[иi]]тр[oо0])|(д[иi][сc]к[oо0]рд)/g,
 
     secondaryBannedWords : /(g[il1]?ve?[wv][аa][yuу])|(g[il1]?ft)|(fr[e3е][e3е])|(st[ae3еа][ae3еа]m)|(b[il1]?rth)|([pр]r[ae3еа][mn]{1,2}[il1]?[yuу][mn]{1,2})/g,  
     secondaryBannedWordsRus : /(р[aoао0][з3]д[aoао0]ч[aoао0])|(б[еe3]сп?л[aoао0]тн)|(п[oо0]д[aoао0]р[oо0]?)/g,
 
-    allBannedWords : /(n[il1]tr[oо0]?)|(d[il1]?[sc][sc]?[oо0]?r[db])|(g[il1]?ve?[wv][аa][yuу])|(g[il1]?ft)|(fr[e3е][e3е])|(st[ae3еа][ae3еа]m)|(b[il1]?rth)|([pр]r[ae3еа][mn]{1,2}[il1]?[yuу][mn]{1,2})/g,
+    allBannedWords : /(n[il1]tr[oо0]?)|(d[il1]?[sc][sc]?[oо0d]?r[db])|(g[il1]?ve?[wv][аa][yuу])|(g[il1]?ft)|(fr[e3е][e3е])|(st[ae3еа][ae3еа]m)|(b[il1]?rth)|([pр]r[ae3еа][mn]{1,2}[il1]?[yuу][mn]{1,2})/g,
     
     notLetters : /\W*[24-9]*_*/g,
     spacedLinksFix : /(\.\s+)|(\s+\.)/g,
